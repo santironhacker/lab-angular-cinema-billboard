@@ -1,3 +1,13 @@
 <p>
   my-home-component works!
 </p>
+
+
+<div>
+  <ul id="wrapper">
+    <div *ngFor="let movie of movieList">
+      {{ movie.title }}
+      <img src=" {{ movie.poster }} ">
+    </div>
+  </ul>
+</div>
