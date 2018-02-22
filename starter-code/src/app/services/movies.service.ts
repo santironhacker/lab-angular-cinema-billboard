@@ -21,7 +21,9 @@ export class MoviesService {
         "William Sadler",
         "Clancy Brown",
         "Gil Bellows"
-      ]
+      ],
+      hours: ['Wednesday 19:30, 22:30', 'Thursday 20:30, 23:30'],
+      room: 1
     }, {
       id: 2,
       title: "The Godfather",
@@ -39,7 +41,9 @@ export class MoviesService {
         "Richard S. Castellano",
         "Robert Duvall",
         "Sterling Hayden"
-      ]
+      ],
+      hours: ['Wednesday 19:30, 22:30', 'Thursday 20:30, 23:30'],
+      room: 2
     }, {
       id: 3,
       title: "The Godfather Part II",
@@ -57,7 +61,9 @@ export class MoviesService {
         "Robert De Niro",
         "John Cazale",
         "Talia Shire"
-      ]
+      ],
+      hours: ['Wednesday 19:30, 22:30', 'Thursday 20:30, 23:30'],
+      room: 3
     }, {
       id: 4,
       title: "The Dark Knight",
@@ -75,7 +81,9 @@ export class MoviesService {
         "Michael Caine",
         "Maggie Gyllenhaal",
         "Gary Oldman"
-      ]
+      ],
+      hours: ['Wednesday 19:30, 22:30', 'Thursday 20:30, 23:30'],
+      room: 4
     }, {
       id: 5,
       title: "Schindler's List",
@@ -93,9 +101,11 @@ export class MoviesService {
         "Caroline Goodall",
         "Jonathan Sagall",
         "Embeth Davidtz"
-      ]
+      ],
+      hours: ['Wednesday 19:30, 22:30', 'Thursday 20:30, 23:30'],
+      room: 5
     }
-  ]
+  ];
   
 
   constructor() { }
@@ -104,8 +114,12 @@ export class MoviesService {
     return this.moviesList;
   }
 
-  getMovie(id) {
-    return this.moviesList['id'];
+  getMovie(id: Number) {
+    for(let i= 0; i < this.moviesList.length; i++) {
+      if (this.moviesList[i].id === id) {
+        return this.moviesList[i]
+      }
+    }
   }
 
 }

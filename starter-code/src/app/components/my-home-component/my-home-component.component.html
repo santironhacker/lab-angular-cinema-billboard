@@ -6,8 +6,9 @@
 <div>
   <ul id="wrapper">
     <div *ngFor="let movie of movieList">
-      {{ movie.title }}
+      <span>{{ movie.room }}</span>
       <img src=" {{ movie.poster }} ">
+      <span>{{ movie.title }}</span>
     </div>
   </ul>
 </div>

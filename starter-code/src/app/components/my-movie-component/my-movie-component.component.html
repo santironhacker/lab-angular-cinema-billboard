@@ -1,3 +1,9 @@
 <p>
   my-movie-component works!
 </p>
+
+<p *ngIf="!movie">Loading the movie...</p>
+<p *ngIf="movie">{{ movie.title }}</p>
+
+<a [routerLink]="['/movie', movie.id-1]">Previous Movie</a>
+<a [routerLink]="['/movie', movie.id+1]">Next Movie</a>
